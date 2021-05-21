@@ -94,11 +94,11 @@ ${response.projectUsage}
 
 # Tests
  ${response.projectTests}
- 
+
 # Questions
  ${response.contactInstructions}
  ${response.emailInstructions}
- ${response.gitHub}`;
+ [Github Profile](https://github.com/${response.gitHub}`;
 
     console.log(result);
     console.log(response);
