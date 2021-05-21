@@ -28,9 +28,9 @@ const questions = [
     },
     {
         type: "list",
-        message: "Select what type of license you used for this project.",
-        choices: ["MIT", "ISC", "Apache License 2.0", "GNU GPLv3"],
-        name: "projectLicense"
+        message: "Select what type of projectLicense you used for this project.",
+        choices: ["MIT", "ISC", "GNU GPLv3"],
+        name: "projectprojectLicense"
     },
     {
         type: "input",
@@ -62,6 +62,14 @@ const questions = [
 // Launching the prompt interface (inquirer.prompt) with our questions array that will wait for the user's input
 // User input value are called back (.then method) and applied to the response argument 
 inquirer.prompt(questions).then((response) => {
+    if (response.projectLicense === 'ISC') {
+        response.projectLicense = '[![projectLicense: ISC](https://img.shields.io/badge/projectLicense-ISC-blue.svg)](https://opensource.org/projectLicenses/ISC)'
+    }
+    if (response.projectLicense === 'GNU GPL v3') {
+        response.projectLicense = '[![projectLicense: GPL v3](https://img.shields.io/badge/projectLicense-GPLv3-blue.svg)](https://www.gnu.org/projectLicenses/gpl-3.0)'
+    } else {
+        response.projectLicense = '[![projectLicense: MIT](https://img.shields.io/badge/projectLicense-MIT-yellow.svg)](https://opensource.org/projectLicenses/MIT)'
+    }
 
     const result = `
 # Table of Contents
@@ -69,7 +77,7 @@ inquirer.prompt(questions).then((response) => {
 2. [Description](#Description)
 3. [Installation Instructions](#Installation-Instructions)
 4. [Usage](#Usage)
-5. [License](#License)
+5. [projectLicense](#projectLicense)
 6. [Contributions](#Contributions)
 7. [Tests](#Tests)
 8. [Questions](#Questions)
@@ -86,7 +94,7 @@ inquirer.prompt(questions).then((response) => {
 # Usage
 ${response.projectUsage}
 
-# License
+# projectLicense
  ${response.projectLicense}
 
 # Contributions
@@ -103,16 +111,8 @@ ${response.projectUsage}
     console.log(result);
     console.log(response);
     // User responses are logged using the "fs.writeFile" to the generated Read Me file
-    fs.writeFile("GENERATEDREADME.md", result, function (err) {
-        if (err) return console.log(err);
-        console.log("Congratulations 🎉! Your Read Me was generated.")
+    fs.writeFile("GENERATEDREADME.md", result, (err) => {
+        err ? console.log(err) : console.log('Congratulations 🎉! Your Read Me was generated.')
     });
 });
 
-// function to generate markdown for README
-function generateMarkdown(data) {
-    return `# ${data.title}
-  `;
-}
-
-module.exports = generateMarkdown;
