@@ -75,23 +75,30 @@ inquirer.prompt(questions).then((response) => {
 8. [Questions](#Questions)
 
 # Name
-# ${response.projectName}
+ ${response.projectName}
+
 # Description
-# ${response.projectDescription}
+ ${response.projectDescription}
+
 # Installation Instructions
-# ${response.projectInstall}
+ ${response.projectInstall}
+
 # Usage
-# ${response.projectUsage}
+${response.projectUsage}
+
 # License
-# ${response.projectLicense}
+ ${response.projectLicense}
+
 # Contributions
-# ${response.projectContributions}
+ ${response.projectContributions}
+
 # Tests
-# ${response.projectTests}
+ ${response.projectTests}
+ 
 # Questions
-# ${response.contactInstructions}
-# ${response.emailInstructions}
-# ${response.gitHub}`;
+ ${response.contactInstructions}
+ ${response.emailInstructions}
+ ${response.gitHub}`;
 
     console.log(result);
     console.log(response);

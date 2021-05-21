@@ -10,20 +10,27 @@
 8. [Questions](#Questions)
 
 # Name
-# Temi
+ test
+
 # Description
-# test
+ test
+
 # Installation Instructions
-# test
+ test
+
 # Usage
-# test
+test
+
 # License
-# MIT
+ MIT
+
 # Contributions
-# test
+ test
+
 # Tests
-# test
+ test
+ 
 # Questions
-# test
-# test
-# test
+ test
+ test
+ test
