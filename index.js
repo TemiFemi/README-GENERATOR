@@ -59,7 +59,11 @@ const questions = [
     },
 ];
 
-const result = `
+// Launching the prompt interface (inquirer.prompt) with our questions array that will wait for the user's input
+// User input value are called back (.then method) and applied to the response argument 
+inquirer.prompt(questions).then((response) => {
+
+    const result = `
 # Table of Contents
 1. [Name](#Name)
 2. [Description](#Description)
@@ -87,4 +91,13 @@ const result = `
 # Questions
 # ${response.contactInstructions}
 # ${response.emailInstructions}
-# ${response.gitHub}`
+# ${response.gitHub}`;
+
+    console.log(result);
+    console.log(response);
+    // User responses are logged using the "fs.writeFile" to the generated Read Me file
+    fs.writeFile("GENERATEDREADME.md", result, function (err) {
+        if (err) return console.log(err);
+        console.log("Congratulations 🎉! Your Read Me was generated.")
+    });
+});
