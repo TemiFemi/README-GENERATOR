@@ -12,7 +12,7 @@
 # Name
 # Temi
 # Description
-# Test
+# test
 # Installation Instructions
 # test
 # Usage
@@ -25,5 +25,5 @@
 # test
 # Questions
 # test
-# oluwatemi@gmail.com
-# TemiFemi
+# test
+# test
