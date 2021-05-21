@@ -57,5 +57,34 @@ const questions = [
         message: "Please enter your Github Username.",
         name: "gitHub",
     },
-]
-console.log(questions)
+];
+
+const result = `
+# Table of Contents
+1. [Name](#Name)
+2. [Description](#Description)
+3. [Installation Instructions](#Installation-Instructions)
+4. [Usage](#Usage)
+5. [License](#License)
+6. [Contributions](#Contributions)
+7. [Tests](#Tests)
+8. [Questions](#Questions)
+
+# Name
+# ${response.projectName}
+# Description
+# ${response.projectDescription}
+# Installation Instructions
+# ${response.projectInstall}
+# Usage
+# ${response.projectUsage}
+# License
+# ${response.projectLicense}
+# Contributions
+# ${response.projectContributions}
+# Tests
+# ${response.projectTests}
+# Questions
+# ${response.contactInstructions}
+# ${response.emailInstructions}
+# ${response.gitHub}`
