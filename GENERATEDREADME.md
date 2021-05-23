@@ -1,5 +1,5 @@
 
-    
+
 # Table of Contents
 1. [Name](#Name)
 2. [Description](#Description)
@@ -9,29 +9,32 @@
 6. [Contributions](#Contributions)
 7. [Tests](#Tests)
 8. [Questions](#Questions)
+9. [Link to ReadMeGenerator Demonstration](#Video Demonstration)
 
 # Name
- test
+ test app
 
 # Description
- test
+ this is a test app
 
 # Installation Instructions
- test
+ you clone it to your repo
 
 # Usage
-test
+you can use it to generate your own repo
 
 # projectLicense
  [![projectLicense: MIT](https://img.shields.io/badge/projectLicense-MIT-yellow.svg)](https://opensource.org/projectLicenses/MIT)
 
 # Contributions
- test
+ none
 
 # Tests
- test
+ no need
 
 # Questions
- test
- test
- [Github Profile](https://github.com/test
+ email
+ oluwatemi@gmail.com
+ [Github Profile](https://github.com/TemiFemi
+
+ 
