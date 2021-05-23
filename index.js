@@ -72,6 +72,7 @@ inquirer.prompt(questions).then((response) => {
     }
 
     const result = `
+
 # Table of Contents
 1. [Name](#Name)
 2. [Description](#Description)
@@ -81,6 +82,7 @@ inquirer.prompt(questions).then((response) => {
 6. [Contributions](#Contributions)
 7. [Tests](#Tests)
 8. [Questions](#Questions)
+9. [Link to ReadMeGenerator Demonstration](#Video Demonstration)
 
 # Name
  ${response.projectName}
